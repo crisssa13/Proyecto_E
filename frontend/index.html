@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Control IoT - Semita.sv</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://jsdelivr.net" rel="stylesheet">
+    <!-- Google Fonts para el display digital -->
+    <link href="https://googleapis.com" rel="family">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container my-4 main-card">
+        <!-- Encabezado de la Interfaz -->
+        <div class="row bg-primary text-white p-2 rounded-top align-items-center header-bar">
+            <div class="col-6">
+                <span class="fw-bold">DESARROLLO</span>
+            </div>
+            <div class="col-6 text-end">
+                <span class="badge bg-light text-dark url-mock">🔒 semita.sv</span>
+            </div>
+        </div>
+
+        <div class="row p-4 bg-light rounded-bottom shadow">
+            <!-- Bloque de Control y Monitoreo -->
+            <div class="col-md-6 d-flex flex-column justify-content-between mb-4 mb-md-0">
+                
+                <!-- Selector de Modo de Operación -->
+                <div class="mb-4 text-center">
+                    <h5 class="fw-bold mb-2">Modo de Operación</h5>
+                    <div class="btn-group w-100" role="group">
+                        <input type="radio" class="btn-check" name="btnmodo" id="modoManual" checked autocomplete="off">
+                        <label class="btn btn-outline-secondary fw-bold" for="modoManual">MANUAL</label>
+                        
+                        <input type="radio" class="btn-check" name="btnmodo" id="modoAuto" autocomplete="off">
+                        <label class="btn btn-outline-success fw-bold" for="modoAuto">AUTOMÁTICO</label>
+                    </div>
+                </div>
+
+                <!-- Botones de Navegación Manual -->
+                <div id="panelManual" class="d-grid gap-3 mb-4">
+                    <button id="btnIzquierda" class="btn btn-custom-blue text-white fw-bold py-2">IZQUIERDA</button>
+                    <button id="btnDerecha" class="btn btn-custom-blue text-white fw-bold py-2">DERECHA</button>
+                    <button id="btnDetener" class="btn btn-danger fw-bold py-2">DETENER</button>
+                </div>
+
+                <!-- Estado del Motor -->
+                <div class="text-center p-2 border rounded bg-white mb-3">
+                    <span class="text-muted fw-bold">ESTADO MOTOR:</span>
+                    <span id="txtEstadoMotor" class="fw-bold text-dark ms-2">DETENIDO</span>
+                </div>
+            </div>
+
+            <!-- Bloque del Visualizador de Distancia -->
+            <div class="col-md-6 d-flex flex-column align-items-center justify-content-center">
+                <div class="display-container text-center p-4 rounded shadow-sm w-100">
+                    <div class="text-muted small fw-bold mb-1 uppercase tracking-wider text-white-50">DISTANCIA</div>
+                    <div class="digital-number" id="txtDistancia">000</div>
+                    <div class="text-white fw-bold mt-1">cm</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sección F.C. Barcelona e Integrantes -->
+        <div class="row mt-4">
+            <div class="col-12 text-center fc-barcelona-section rounded p-3 shadow text-white">
+                <!-- Escudo Oficial FCB -->
+                <div class="mb-3">
+                    <img src="https://wikimedia.org" alt="Escudo F.C. Barcelona" class="fcb-crest">
+                </div>
+                
+                <!-- Contenedor de Integrantes -->
+                <div class="row g-3 justify-content-center">
+                    <!-- Integrante 1 -->
+                    <div class="col-6 col-sm-3 text-center">
+                        <div class="avatar-card p-2 rounded">
+                            <img src="https://dicebear.com" alt="Avatar" class="avatar-img mb-2">
+                            <p class="m-0 fw-bold small">APELLIDO 1</p>
+                        </div>
+                    </div>
+                    <!-- Integrante 2 -->
+                    <div class="col-6 col-sm-3 text-center">
+                        <div class="avatar-card p-2 rounded">
+                            <img src="https://dicebear.com" alt="Avatar" class="avatar-img mb-2">
+                            <p class="m-0 fw-bold small">APELLIDO 2</p>
+                        </div>
+                    </div>
+                    <!-- Integrante 3 -->
+                    <div class="col-6 col-sm-3 text-center">
+                        <div class="avatar-card p-2 rounded">
+                            <img src="https://dicebear.com" alt="Avatar" class="avatar-img mb-2">
+                            <p class="m-0 fw-bold small">APELLIDO 3</p>
+                        </div>
+                    </div>
+                    <!-- Integrante 4 -->
+                    <div class="col-6 col-sm-3 text-center">
+                        <div class="avatar-card p-2 rounded">
+                            <img src="https://dicebear.com" alt="Avatar" class="avatar-img mb-2">
+                            <p class="m-0 fw-bold small">APELLIDO 4</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap 5 Bundle con Popper -->
+    <script src="https://jsdelivr.net"></script>
+    <script src="script.js"></script>
+</body>
+</html>
