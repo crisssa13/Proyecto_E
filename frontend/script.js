@@ -1,5 +1,6 @@
 // URL base de tu API REST local corriendo en tu Visual Studio Code
-const API_URL = "http://localhost:3000/api"; 
+const API_URL = "https://onrender.com";
+
 
 // Elementos del DOM
 const txtDistancia = document.getElementById('txtDistancia');
